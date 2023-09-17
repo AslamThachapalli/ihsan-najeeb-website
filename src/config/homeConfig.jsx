@@ -7,7 +7,7 @@ import { FaMobileAlt } from "react-icons/fa";
 const homeConfig = {
   greeting: (
     <h1 className="heading">
-      Hi! I'm <strong className="main-name"> IHSAN NAJEEB P.N</strong>
+      Hi! I'm <strong className="main-name">IHSAN NAJEEB P.N</strong>
     </h1>
   ),
   titles: ["Biotechnologist", "Lab Researcher", "Research Scientist"],

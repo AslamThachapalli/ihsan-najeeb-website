@@ -13,10 +13,17 @@ const Home = () => {
       <Container fluid className="home-content" id="home">
         <Row>
           <Col className="home-header">
-            <div>{homeConfig.greeting}</div>
-            <div style={{ textAlign: "center" }}>
-              <DynamicTyping titles={homeConfig.titles} />
+            <div className="row">
+              <div className="col-6"></div>
+
+              <div className="col-6">
+                <div>{homeConfig.greeting}</div>
+                <div style={{ textAlign: "center" }}>
+                  <DynamicTyping titles={homeConfig.titles} />
+                </div>
+              </div>
             </div>
+
             <div>
               <About about={homeConfig.about} />
             </div>

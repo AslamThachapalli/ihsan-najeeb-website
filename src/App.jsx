@@ -1,6 +1,6 @@
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home/Home";
-import Achievements from "./pages/Achievements";
+import Achievements from "./pages/Achievement/Achievements";
 import Info from "./pages/Info";
 import Skills from "./pages/Skills";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
