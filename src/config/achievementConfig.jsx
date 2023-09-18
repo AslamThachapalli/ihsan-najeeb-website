@@ -1,3 +1,26 @@
+const educationConfig = [
+  {
+    id: "2",
+    degreeType: "M.Sc. Biotechnology (2022)",
+    college: "Kerala University of Fisheries and Ocean Studies",
+  },
+  {
+    id: "1",
+    degreeType: " B.Sc. Biotechnology (2020)",
+    college: "Al-Ameen College (M.G University)",
+  },
+];
+
+const certificationConfig = [
+  {
+    id: "1",
+    topic: "ADVANCED TRAINING IN MICROBIOLOGY AND MOLECULAR BIOLOGY TECHNIQUES",
+    from: "Cochin University of Science and Technology (2023)",
+    description:
+      "Certified in Microbiology techniques and Molecular Microbiology Techniques",
+  },
+];
+
 const workshopConfig = [
   {
     id: "8",
@@ -151,4 +174,9 @@ const publicationConfig = [
   },
 ];
 
-export { workshopConfig, publicationConfig };
+export {
+  workshopConfig,
+  publicationConfig,
+  educationConfig,
+  certificationConfig,
+};

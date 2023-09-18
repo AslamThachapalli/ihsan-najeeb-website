@@ -6,3 +6,34 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
 }
+
+.text_content_wrapper {
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .text_content_wrapper {
+    max-width: 55%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .text_content_wrapper {
+    width: 44rem;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  .text_content_wrapper {
+    width: 25rem;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .text_content_wrapper {
+    max-width: 90%;
+  }
+}
