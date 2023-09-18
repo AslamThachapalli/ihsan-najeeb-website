@@ -1,6 +1,6 @@
 const workshopConfig = [
   {
-    id: "project-8",
+    id: "8",
     about:
       "Workshop on Advanced Training in Microbiology and Molecular Biology Techniques - " +
       "Hosted by Dept. Of Biotechnology CUSAT, Cochin, 2023.",
@@ -30,7 +30,7 @@ const workshopConfig = [
     ],
   },
   {
-    id: "project-6",
+    id: "6",
     about:
       "International conference on clinical diagnosis and biomedical devices (ICCDBD 2022) - " +
       "Hosted by Sri Shakthi Institute of Engineering and Technology, Coimbatore, 2022.",
@@ -45,7 +45,7 @@ const workshopConfig = [
     ],
   },
   {
-    id: "project-5",
+    id: "5",
     about:
       "Seminar on ‘Bioprocesses & Biotechnology: An Expert Insight Session’-Hosted by Taylor & " +
       "Francis Group & Biotech Research Society of India (BRSI), 2022.",
@@ -60,7 +60,7 @@ const workshopConfig = [
     ],
   },
   {
-    id: "project-4",
+    id: "4",
     about:
       "Hands-on Online Workshop on “Fundamentals of NGS analysis and" +
       " Drug Discovery”- Hosted by The Bio-IT Centre at IBAB, Bangalore, 2022",
@@ -75,7 +75,7 @@ const workshopConfig = [
     ],
   },
   {
-    id: "project-3",
+    id: "3",
     about:
       "Online Seminar on “Application of CRISPR-Cas Gene Editing Tool”-Hosted by Department of Biotechnology, " +
       "Maulana Abul Kalam Azad University of Technology, West Bengal, 2022.",
@@ -90,7 +90,7 @@ const workshopConfig = [
     ],
   },
   {
-    id: "project-2",
+    id: "2",
     about:
       "Workshop on Bioinformatics and Computational Biology Symposium 2021- Hosted by NIH, 2021.",
     description: [
@@ -104,7 +104,7 @@ const workshopConfig = [
     ],
   },
   {
-    id: "project-1",
+    id: "1",
     about:
       "Seminar on 'How Covid-19 will Change the World of Research' - Hosted by Al-Ameen College, Edathala, 2020.",
     description: [
@@ -119,4 +119,36 @@ const workshopConfig = [
   },
 ];
 
-export default workshopConfig;
+const publicationConfig = [
+  {
+    id: "4",
+    about:
+      "Najeeb, P.N.I (2022).'Revolutionizing Medicine: Unleashing the Power of CRISPR for " +
+      "Modern Advancements in Healthcare' Poster presented at the National Conference on Recent " +
+      "Advances in Biotechnology and Microbiology, Hosted By TangentUp Labs Pvt.Ltd Cochin, India.",
+    link: "",
+  },
+  {
+    id: "3",
+    about:
+      "Najeeb, P.N.I (2020). “Differential Expression of Interleukin 1β before and after calving " +
+      "in dairy cows” Abstract presented at KVASU Mannuthy and Al- Ameen College Edathala- INDIA.",
+    link: "",
+  },
+  {
+    id: "2",
+    about:
+      "In the approval stage of the project titled 'Cardiovascular Diseases in" +
+      "Modern India: Insights into the Interplay with COVID-19'",
+    link: "",
+  },
+  {
+    id: "1",
+    about:
+      "Under assessment of the project titled 'Differential phenotyping of Human Peripheral Blood (HPB) " +
+      "by utilizing FACS and Microscopy'",
+    link: "",
+  },
+];
+
+export { workshopConfig, publicationConfig };

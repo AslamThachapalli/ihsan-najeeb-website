@@ -1,17 +1,32 @@
 import React from "react";
+import ConditionalWrapper from "../ConditionalWrapper";
+
 import "./CardItem.css";
 
-const CardItem = ({ id, title, description }) => {
+const CardItem = ({ title, description, link }) => {
   return (
-    <div className={"card"} key={id}>
-      <div className={"card__body"}>
-        <h6 className={"card__title"}>
-          <strong>{title}</strong>
-        </h6>
+    <ConditionalWrapper
+      condition={link}
+      wrapper={(children) => (
+        <a
+          style={{ display: "flex", textDecoration: "none", color: "inherit" }}
+          href={link}
+          target="_blank"
+        >
+          {children}
+        </a>
+      )}
+    >
+      <div className={"card"}>
+        <div className={"card__body"}>
+          <h6 className={"card__title"}>
+            <strong>{title}</strong>
+          </h6>
 
-        <hr className={"card__line"} />
+          <hr className={"card__line"} />
+        </div>
       </div>
-    </div>
+    </ConditionalWrapper>
   );
 };
 
