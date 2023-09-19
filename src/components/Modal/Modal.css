@@ -31,6 +31,8 @@
 .modal-container {
   width: 80vw;
   max-width: 800px;
+  max-height: 90vh;
+  overflow: scroll;
   background: white;
   border-radius: var(--borderRadius);
 }
