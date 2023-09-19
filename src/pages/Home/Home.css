@@ -1,20 +1,21 @@
-.home-header h1 {
-  color: #f5f5f5;
-  font-size: 3em;
+.home-header img {
+  width: 50%;
+  margin: 25px 0px;
 }
 
 .main-name {
-  color: #f6f2d4;
+  color: black;
 }
 
 .Typewriter__wrapper {
   font-size: 2.8em;
-  color: #f5f5f5;
+  color: gray;
   font-weight: 600;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em;
-  color: #f5f5f5;
+  color: gray;
 }
 
 .about {
@@ -32,4 +33,38 @@
   margin: auto;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .home-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets/ihsan-main-pic.JPG");
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 100vh;
+  }
+
+  .heading {
+    color: white;
+  }
+
+  .greeting-height {
+    height: 100vh;
+  }
+
+  .main-name {
+    color: wheat;
+  }
+
+  .Typewriter__wrapper {
+    font-size: 2em;
+    color: white;
+    font-weight: 600;
+  }
+
+  .Typewriter__cursor {
+    font-size: 2em;
+    color: whitesmoke;
+  }
 }
