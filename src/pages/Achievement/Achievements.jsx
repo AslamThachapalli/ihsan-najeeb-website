@@ -7,6 +7,7 @@ import {
   certificationConfig,
 } from "../../config/achievementConfig";
 import CardItem from "../../components/Cards/CardItem.jsx";
+import Modal from "../../components/Modal/Modal";
 
 import "./Achievements.css";
 
@@ -26,10 +27,26 @@ function screenWidth() {
 }
 
 const Achievements = () => {
+  function handleCardClick(item) {
+    setSelectedItem(item);
+    setIsOpen(true);
+  }
+
   const width = screenWidth();
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <section>
+      {isOpen && (
+        <Modal
+          key={`modal-${selectedItem.id}`}
+          title={selectedItem.about}
+          listContent={selectedItem.description}
+          setIsOpen={setIsOpen}
+        />
+      )}
+
       <br />
       <h4 style={{ textAlign: "center" }}>Education</h4>
       <ul className="list-group text_content_wrapper">
@@ -51,7 +68,13 @@ const Achievements = () => {
       <ul className="list-group text_content_wrapper">
         {certificationConfig.map((item) => (
           <li key={item.id} className="list-group-item align-center">
-            <span style={{ fontWeight: "bold", marginRight: "8px" }}>
+            <span
+              style={{
+                fontWeight: "bold",
+                marginRight: "8px",
+                textTransform: "capitalize",
+              }}
+            >
               {item.topic}
             </span>
 
@@ -79,6 +102,7 @@ const Achievements = () => {
             key={item.id}
             title={item.about}
             description={item.description}
+            customClickEvent={() => handleCardClick(item)}
           />
         ))}
       </div>

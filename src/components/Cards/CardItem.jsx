@@ -3,7 +3,7 @@ import ConditionalWrapper from "../ConditionalWrapper";
 
 import "./CardItem.css";
 
-const CardItem = ({ title, description, link }) => {
+const CardItem = ({ title, description, link, customClickEvent }) => {
   return (
     <ConditionalWrapper
       condition={link}
@@ -17,7 +17,7 @@ const CardItem = ({ title, description, link }) => {
         </a>
       )}
     >
-      <div className={"card"}>
+      <div className={"card"} onClick={customClickEvent}>
         <div className={"card__body"}>
           <h6 className={"card__title"}>
             <strong>{title}</strong>
