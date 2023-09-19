@@ -1,33 +1,53 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Tags from "../Tags/Tags";
+import Modal from "../Modal/Modal";
+
 import "./Timeline.css";
 
 const Timeline = (props) => {
+  function handleCardClick(item) {
+    setSelectedItem(item);
+    setIsOpen(true);
+  }
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
   return (
-    <VerticalTimeline>
-      {props.items.map((item) => (
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date={item.date}
-          icon={item.icon}
-          key={item.id}
-        >
-          <h2 className="vertical-timeline-element-title">
-            <strong>{item.title}</strong>
-          </h2>
-          <h4 className="vertical-timeline-element-subtitle">{item.company}</h4>
-          <p className={"vertical-timeline-element-description"}>
-            {item.description}
-          </p>
-          <Tags id={item.id} tags={item.tags}></Tags>
-        </VerticalTimelineElement>
-      ))}
-    </VerticalTimeline>
+    <>
+      {isOpen && (
+        <Modal
+          key={`modal-${selectedItem.id}`}
+          title={selectedItem.title}
+          subtitle={selectedItem.company}
+          content={selectedItem.description}
+          setIsOpen={setIsOpen}
+          isListedContent={true}
+        />
+      )}
+      <VerticalTimeline>
+        {props.items.map((item) => (
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={item.date}
+            icon={item.icon}
+            key={item.id}
+            onTimelineElementClick={() => handleCardClick(item)}
+          >
+            <h2 className="vertical-timeline-element-title">
+              <strong>{item.title}</strong>
+            </h2>
+            <h4 className="vertical-timeline-element-subtitle">
+              {item.company}
+            </h4>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </>
   );
 };
 

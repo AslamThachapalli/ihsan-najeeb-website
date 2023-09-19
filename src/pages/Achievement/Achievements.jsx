@@ -42,7 +42,7 @@ const Achievements = () => {
         <Modal
           key={`modal-${selectedItem.id}`}
           title={selectedItem.about}
-          listContent={selectedItem.description}
+          content={selectedItem.description}
           setIsOpen={setIsOpen}
         />
       )}

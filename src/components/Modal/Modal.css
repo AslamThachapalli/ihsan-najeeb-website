@@ -39,7 +39,8 @@
   padding: 1rem 1.5rem;
 }
 
-.modal-content h3 {
+.modal-content h3,
+.modal-content h6 {
   text-align: center;
 }
 
