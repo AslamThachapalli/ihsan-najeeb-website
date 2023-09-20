@@ -2,7 +2,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./pages/Home/Home";
 import Achievements from "./pages/Achievement/Achievements";
 import Info from "./pages/Info/Info";
-import Skills from "./pages/Skills";
+import Skills from "./pages/Skills/Skills";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import "./App.css";
