@@ -1,0 +1,47 @@
+.center {
+  height: 80vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.center a {
+  font-style: inherit;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.value {
+  letter-spacing: 1px;
+}
+
+table {
+  border-radius: 4px;
+  width: 80%;
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+td {
+  text-align: start;
+  padding: 4px 12px;
+}
+
+.bgDark {
+  background-color: #a1afb3;
+}
+
+.bgLight {
+  background-color: #d9e9eb;
+}
+
+@media only screen and (max-width: 575px) {
+  .bold,
+  .value {
+    font-size: 14px;
+  }
+}
