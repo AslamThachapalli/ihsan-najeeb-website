@@ -1,1 +1,10 @@
+ul {
+  width: 90%;
+  margin: auto;
+}
 
+@media screen and (min-width: 900px) {
+  ul {
+    width: 60%;
+  }
+}
