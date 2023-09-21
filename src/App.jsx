@@ -3,6 +3,7 @@ import Home from "./pages/Home/Home";
 import Achievements from "./pages/Achievement/Achievements";
 import Info from "./pages/Info/Info";
 import Skills from "./pages/Skills/Skills";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // import "./App.css";
@@ -16,8 +17,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/skills" element={<Skills />} />
-          <Route path="/info" element={<Info />} />
+          {/* <Route path="/info" element={<Info />} /> */}
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
