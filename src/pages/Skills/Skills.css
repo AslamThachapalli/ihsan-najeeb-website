@@ -1,10 +1,75 @@
-ul {
+.skill-container {
   width: 90%;
   margin: auto;
 }
 
-@media screen and (min-width: 900px) {
-  ul {
+.skill-container h4 {
+  font-size: 16px;
+  text-align: start;
+  letter-spacing: 1px;
+  transform: translateX(0%);
+  opacity: 1;
+  animation: heading 0.5s ease-in-out 0s 1 normal none;
+}
+
+.skill-container li {
+  letter-spacing: 1px;
+  transform: translateX(0%);
+  opacity: 1;
+  animation-name: slide-in-x;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes heading {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-x {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-y {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .skill-container {
     width: 60%;
+    margin: auto;
+  }
+
+  .skill-container h4 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .skill-container li {
+    transform: translateY(0%);
+    animation-name: slide-in-y;
   }
 }

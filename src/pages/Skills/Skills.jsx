@@ -6,7 +6,7 @@ import "./Skills.css";
 
 const Skills = () => {
   return (
-    <div>
+    <div className="skill-container">
       <SkillList
         title="Area of Expertise"
         contentList={skillConfig.areaOfExpertise}
